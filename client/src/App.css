@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+/* Style created by me */
+
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Change this to ensure body has at least the full height of the viewport */
+  min-height: 100vh; /* This ensures that the body is at least the height of the viewport */
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::before {
+  content: "";
+  position: fixed; /* Use fixed to ensure the background covers the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cover the full viewport width */
+  height: 100vh; /* Cover the full viewport height */
+  background-image: url('bgmr.jpg');
+  background-size: 100% 100%; /* Stretch the image to cover the specified width and height */
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* Nav bar Styles */
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  flex-grow: 1; /* Allows the main content to take up the remaining space */
+  margin-left: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Nav bar Styles end */
+
+
